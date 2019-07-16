@@ -1,5 +1,6 @@
 package com.cai.smith.videogameapi.utility;
 
+import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3;
@@ -58,6 +59,9 @@ public class FileDownloader {
         } catch (IOException | AmazonS3Exception e) {
             logger.error("Failed to download file from S3", e);
             throw new FileDownloaderException(e);
+        } catch (SdkClientException sdkEx) {
+            logger.error("SDK exception thrown when attempting to download file");
+            throw new FileDownloaderException(sdkEx);
         }
     }
 }
