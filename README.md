@@ -51,7 +51,8 @@ Not updating or providing these key's will default to a single authorised develo
   "developer" : "Bungie"
 }
 ```
-### Note: If using default developer - the value for developer will need to be `"developer" : "Nintendo"`
+### Note: 
+If using default developer - the value for developer will need to be `"developer" : "Nintendo"`
 
 ```
 {
