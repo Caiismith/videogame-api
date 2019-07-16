@@ -51,7 +51,20 @@ Not updating or providing these key's will default to a single authorised develo
   "developer" : "Bungie"
 }
 ```
-Note: If using default developer - the value for developer will need to be `"developer" : "Bungie"`
+### Note: If using default developer - the value for developer will need to be `"developer" : "Nintendo"`
+
+```
+{
+  "title" : "Super Smash Bros.",
+  "release_date" : "2008-08-11",
+  "genres" : [
+      "Fighting",
+      "Action",
+      "Multiplayer"
+  ],
+  "developer" : "Nintendo"
+}
+```
 
 ## Example Requests
  - `POST` - `localhost:8080/games/` - including a valid body (see example above)
