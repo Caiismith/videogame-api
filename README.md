@@ -68,8 +68,11 @@ If using default developer - the value for developer will need to be `"developer
 ```
 
 ## Example Requests
- - `POST` - `localhost:8080/games/` - including a valid body (see example above)
- - `GET` - `localhost:8080/games/` - return all games present in database
- - `GET` - `localhost:8080/games/{id}` - return game by id - the games ID will be present in a `POST` response or from the `GET` for all games
- - `PUT` - `localhost:8080/games/developer/{developer}/{id}` - update a game - requires id of game to be updated and developer of the game(can only update if developer matches what is present in the game)
- - `DELETE` - `localhost:8080/games/developer/{developer}/{id}` - delete a game - requires id of game to be deleted and developer of the game(can only delete if developer matches what is present in the game)
+
+| Request | Endpoint | Description |
+| ------- | -------- | ----------- |
+|`POST`   | `localhost:8080/games/` | including a valid body (see example above) |
+|`GET`    | `localhost:8080/games/` | return all games present in database |
+|`GET`    | `localhost:8080/games/{id}`| return game by id - the games ID will be present in a `POST` response or from the `GET` for all games |
+|`PUT`| `localhost:8080/games/developer/{developer}/{id}` | update a game - requires id of game to be updated and developer of the game(can only update if developer matches what is present in the game) |
+|`DELETE` | `localhost:8080/games/developer/{developer}/{id}` | delete a game - requires id of game to be deleted and developer of the game(can only delete if developer matches what is present in the game) |
