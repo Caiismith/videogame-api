@@ -9,6 +9,23 @@ Provides CRUD functionality for video game data which is stored in a Mongo datab
 - MongoDB
 - Git
 
+## Environment Variables
+To access the functionality provided by the developers.json file retreived from s3 - update the following:
+
+- Within `resources/application.properties` update the following to use your own access and secret access keys:
+```
+awsconfig.accessKey=accesskey
+awsconfig.secretAccessKey=secretAccessKey
+```
+Not updating or providing these key's will default to a single authorised developer:
+
+```
+{
+    "name" : "Nintendo",
+    "headquarters" : "Japan"
+}
+```
+
 ## How to run
 - With mongodb installed, open a window in your terminal and run `mongod --port 12345`
 - Within your IDE - Click Run on the `VideogameApiApplication` class
@@ -34,6 +51,22 @@ Provides CRUD functionality for video game data which is stored in a Mongo datab
   "developer" : "Bungie"
 }
 ```
+### Note: 
+If using default developer - the value for developer will need to be `"developer" : "Nintendo"`
+
+```
+{
+  "title" : "Super Smash Bros.",
+  "release_date" : "2008-08-11",
+  "genres" : [
+      "Fighting",
+      "Action",
+      "Multiplayer"
+  ],
+  "developer" : "Nintendo"
+}
+```
+
 ## Example Requests
  - `POST` - `localhost:8080/games/` - including a valid body (see example above)
  - `GET` - `localhost:8080/games/` - return all games present in database
