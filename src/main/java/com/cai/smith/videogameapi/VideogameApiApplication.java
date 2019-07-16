@@ -52,7 +52,19 @@ public class VideogameApiApplication implements CommandLineRunner {
 
         } catch (FileDownloaderException e) {
             logger.error("Failed to download approved developers list");
-        }
 
+            developerRepository.save(createDefaultApprovedDeveloper());
+            logger.info("Default developer provided");
+        }
+    }
+
+    private Developer createDefaultApprovedDeveloper() {
+        logger.info("Approved developers list unavailable - Providing default entry");
+
+        Developer defaultApprovedDeveloper = new Developer();
+        defaultApprovedDeveloper.setName("Nintendo");
+        defaultApprovedDeveloper.setHeadquarters("Japan");
+
+        return defaultApprovedDeveloper;
     }
 }
