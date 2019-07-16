@@ -51,6 +51,8 @@ Not updating or providing these key's will default to a single authorised develo
   "developer" : "Bungie"
 }
 ```
+Note: If using default developer - the value for developer will need to be `"developer" : "Bungie"`
+
 ## Example Requests
  - `POST` - `localhost:8080/games/` - including a valid body (see example above)
  - `GET` - `localhost:8080/games/` - return all games present in database
