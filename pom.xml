@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <s3.version>1.11.486</s3.version>
+        <s3.version>1.12.261</s3.version>
 
         <!--Testing Versions-->
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
